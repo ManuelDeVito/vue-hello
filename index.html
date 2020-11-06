@@ -11,7 +11,10 @@
 
         <div id="selettore">
 
-            <h1 class="benvenuto">{{testo}}</h1>
+            <h1 :class="colore">{{testo}}</h1>
+
+            <img :src="immagine" @click='cambioColore'>
+
 
         </div>
 

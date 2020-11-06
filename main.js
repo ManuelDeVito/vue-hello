@@ -7,9 +7,34 @@ var app = new Vue({
 
     el: '#selettore',
 
+
+
     data: {
 
-        testo: 'Benvenuto Vue!!!'
+        testo: 'Benvenuto Vue!!!',
+
+        immagine: 'img/Curva Sud.jpg',
+
+        colore: 'rosso'
+
+    },
+
+    methods: {
+
+    cambioColore: function() {
+
+        if (this.colore == 'rosso') {
+
+            this.colore = 'blu';
+
+        } else
+        {
+            this.colore = 'rosso';
+        }
+
+
     }
+
+    },
 
 });
