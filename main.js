@@ -3,38 +3,36 @@
 // BONUS: Aggiungere un’immagine presa anch’essa da un data.
 
 
-var app = new Vue({
+var app = new Vue ({
 
-    el: '#selettore',
-
-
+    el: '#contenitore',
 
     data: {
 
+        indice: 0,
+
         testo: 'Benvenuto Vue!!!',
 
-        immagine: 'img/Curva Sud.jpg',
+        colore: 'rosso',
 
-        colore: 'rosso'
-
+        array_foto: ['img/Hulk.jpg', 'img/Superman.jpg', 'img/Hulk2.jpg', 'img/Arciere.jpg', 'img/Gladiatore.jpg', 'img/Dadi.jpg', 'img/LunaRossa.jpg', 'img/Luna.jpg', 'img/Brasile.jpg', 'img/Palme.jpg', 'img/Maldive.jpg',]
     },
+
 
     methods: {
 
-    cambioColore: function() {
+        cambio_foto: function() {
 
-        if (this.colore == 'rosso') {
+            if (this.indice == this.array_foto.length -1) {
 
-            this.colore = 'blu';
+                this.indice = 0;
 
-        } else
-        {
-            this.colore = 'rosso';
+            }else
+            {
+                this.indice++;
+            }
         }
 
-
-    }
-
-    },
+        }
 
 });

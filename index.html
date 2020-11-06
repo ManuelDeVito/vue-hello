@@ -9,11 +9,13 @@
     <body>
 
 
-        <div id="selettore">
+        <div id="contenitore">
 
             <h1 :class="colore">{{testo}}</h1>
 
-            <img :src="immagine" @click='cambioColore'>
+            <img class="dimensione" :src="array_foto[indice]">
+
+            <button @click="cambio_foto" type="button" name="button">Clicca qui!</button>
 
 
         </div>
